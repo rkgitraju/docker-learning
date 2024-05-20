@@ -1,6 +1,12 @@
 # define parent image for project.
 FROM node:latest 
 
+# instal nodemon for auto reflct in conatainers.
+RUN npm install -g nodemon
+
+# specify working directory.
+WORKDIR /app
+
 # where we putting project.
 COPY . .
 
@@ -11,4 +17,4 @@ RUN npm install
 EXPOSE 8081
 
 #  Now run files
-CMD [ "node" , "index.js"]
+CMD ["npm","run","dev"]

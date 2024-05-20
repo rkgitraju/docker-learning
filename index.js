@@ -18,11 +18,22 @@ app.get('/', function (req, res) {
 });  
 
 app.get('/test1', function (req, res) {  
-    res.json({
-        name: "Rahul", 
-        age : 26, 
-        profession : "Dev"
-    });  
+  res.json([
+    {
+      name: "Paul", 
+      age : 26, 
+      profession : "Developer"
+    }, 
+    {
+      name: "John", 
+      age : 90, 
+      profession : "Project Manager"
+    }, 
+    {
+      name: "Doe", 
+      age : 43, 
+    }, 
+  ]);  
 });  
 
 //listen server. 

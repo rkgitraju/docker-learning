@@ -1,0 +1,6 @@
+services:
+  img:
+    build: .
+    container_name: node1
+    ports:
+      - 8081:8081
